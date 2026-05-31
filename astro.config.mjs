@@ -11,25 +11,25 @@ export default defineConfig({
 	fonts: [
 		{
 			provider: fontProviders.local(),
-			name: 'Atkinson',
-			cssVariable: '--font-atkinson',
+			name: 'Bicubik',
+			cssVariable: '--font-bicubik',
 			fallbacks: ['sans-serif'],
 			options: {
 				variants: [
 					{
-						src: ['./src/assets/fonts/atkinson-regular.woff'],
+						src: ['./src/assets/fonts/Bicubik.otf'],
 						weight: 400,
-						style: 'normal',
-						display: 'swap',
-					},
-					{
-						src: ['./src/assets/fonts/atkinson-bold.woff'],
-						weight: 700,
 						style: 'normal',
 						display: 'swap',
 					},
 				],
 			},
+		},
+		{
+			provider: fontProviders.google(),
+			name: 'Montserrat',
+			cssVariable: '--font-montserrat',
+			fallbacks: ['sans-serif'],
 		},
 	],
 });
