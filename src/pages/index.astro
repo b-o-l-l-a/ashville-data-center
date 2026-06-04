@@ -22,38 +22,22 @@ const posts = (await getCollection('blog')).sort(
 			<section class="hero">
 				<h1>Ashville Data Center & Gas Power Plant</h1>
 				<p class="subtitle">
-					A proposed 800 MW natural gas power plant to support a new data center in Ashville, Ohio.
-					The data center has been approved by Ashville Town Council. The power plant requires
-					approval from the <strong>Ohio Power Siting Board (OPSB)</strong>.
+					A global data center developer offered Ashville, Ohio $102 million to approve a massive facility on 195 acres, declaring it an emergency so residents wouldn't have a chance to organize a referendum that would have allowed the public to vote on it. An application for a <strong>800 MW natural gas plant</strong> is currently being considered by the Ohio Power Siting Board, with a decision expected by October 2026.
+				</p>
+				<p class="subtitle">
+					This site is dedicated to understanding the dynamics involved with constructing and operating the data center and associated gas plant, as well as the various regulatory, scientific, and bureaucratic layers involved.
 				</p>
 			</section>
 
-			<section class="status">
-				<h2>Current Status</h2>
-				<div class="status-grid">
-					<div class="status-card approved">
-						<span class="label">Approved</span>
-						<h3>Data Center</h3>
-						<p>Approved by Ashville Town Council</p>
-					</div>
-					<div class="status-card pending">
-						<span class="label">Pending</span>
-						<h3>800 MW Gas Power Plant</h3>
-						<p>Application before the Ohio Power Siting Board (OPSB)</p>
-					</div>
-				</div>
-			</section>
-
 			<section class="updates">
-				<h2>Latest Updates</h2>
 				<ul class="post-list">
 					{posts.map((post) => (
 						<li>
 							<a href={`/blog/${post.id}/`}>
 								<h3>{post.data.title}</h3>
-								<time><FormattedDate date={post.data.pubDate} /></time>
-								{post.data.description && <p>{post.data.description}</p>}
 							</a>
+							<time><FormattedDate date={post.data.pubDate} /></time>
+							{post.data.description && <p>{post.data.description}</p>}
 						</li>
 					))}
 				</ul>
@@ -65,14 +49,16 @@ const posts = (await getCollection('blog')).sort(
 
 <style>
 	main {
-		max-width: 720px;
+		max-width: 800px;
+		width: 100%;
+		box-sizing: border-box;
 		margin: 0 auto;
 		padding: 2em 1em;
 	}
 	.hero {
-		margin-bottom: 3em;
+		margin-bottom: 1.5em;
 		border-bottom: 1px solid #eee;
-		padding-bottom: 2em;
+		padding-bottom: 1.25em;
 	}
 	.hero h1 {
 		font-size: 2em;
@@ -82,40 +68,6 @@ const posts = (await getCollection('blog')).sort(
 		font-size: 1.1em;
 		line-height: 1.6;
 		color: #444;
-	}
-	.status {
-		margin-bottom: 3em;
-	}
-	.status-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.status-card {
-		padding: 1.5em;
-		border-radius: 6px;
-		border: 1px solid #ddd;
-	}
-	.status-card .label {
-		font-size: 0.75em;
-		font-weight: bold;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-	}
-	.status-card.approved .label { color: #2a7d4f; }
-	.status-card.pending .label { color: #b45309; }
-	.status-card h3 {
-		margin: 0.4em 0 0.3em;
-		font-size: 1.1em;
-	}
-	.status-card p {
-		margin: 0;
-		color: #555;
-		font-size: 0.95em;
-	}
-	.updates h2 {
-		margin-bottom: 1em;
 	}
 	.post-list {
 		list-style: none;
@@ -130,7 +82,7 @@ const posts = (await getCollection('blog')).sort(
 	}
 	.post-list a {
 		display: block;
-		padding: 1.25em 0;
+		padding: 1em 0;
 		text-decoration: none;
 		color: inherit;
 	}
@@ -138,21 +90,38 @@ const posts = (await getCollection('blog')).sort(
 		text-decoration: underline;
 	}
 	.post-list h3 {
-		margin: 0 0 0.2em;
-		font-size: 1.1em;
+		margin: 0 0 0.25em;
+		font-family: var(--font-bicubik), sans-serif;
+		font-size: 1.4em;
+		color: var(--green-light);
+		line-height: 1.2;
 	}
 	.post-list time {
-		font-size: 0.85em;
+		font-size: 0.8em;
 		color: #888;
 	}
 	.post-list p {
-		margin: 0.4em 0 0;
+		margin: 0.5em 0 0;
 		color: #555;
 		font-size: 0.95em;
+		line-height: 1.5;
 	}
-	@media (max-width: 600px) {
-		.status-grid {
-			grid-template-columns: 1fr;
+	@media (max-width: 720px) {
+		main {
+			padding: 1.5em 1em;
+		}
+		.hero {
+			margin-bottom: 1em;
+			padding-bottom: 1em;
+		}
+		.hero h1 {
+			font-size: 1.6em;
+		}
+		.subtitle {
+			font-size: 1em;
+		}
+		.post-list h3 {
+			font-size: 1.15em;
 		}
 	}
 </style>
