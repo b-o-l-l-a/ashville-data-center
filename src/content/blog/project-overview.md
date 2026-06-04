@@ -1,6 +1,6 @@
 ---
 title: 'How and Why Ashville Said Yes'
-description: 'A village with a failing water system, an EPA violation notice, and no backup well signed a deal with a global data center developer. Here is what happened, and what comes next.'
+description: "A small town in Ohio faces a $12.5M bill for a new water treatment plant, and an additional series of EPA violations. Without any options, the Village Council approved 195 acres for development of a data center in exchange for $102M, declaring an emergency so residents wouldn't have a chance to vote on it. Here is what happened, and what comes next."
 pubDate: '2026-05-31'
 ---
 
