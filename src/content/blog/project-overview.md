@@ -1,6 +1,6 @@
 ---
 title: 'Pt. 1: How and Why Ashville Said Yes'
-description: "A small Ohio town needed tens of millions to overhaul its water infrastructure. A global data center developer had an offer they couldn't refuse."
+description: "A small Ohio town needed tens of millions of dollars to overhaul its water infrastructure. A global data center developer had an offer they couldn't refuse."
 pubDate: '2026-05-31'
 ---
 
